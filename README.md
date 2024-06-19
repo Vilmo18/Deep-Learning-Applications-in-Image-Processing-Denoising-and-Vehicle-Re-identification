@@ -72,6 +72,8 @@ These are the different component for build our model :
 We evaluate the retrieval performance using Mean Average Precision (mAP). We compute the average precision for each query image based on the ranked list of test images, and then average these precision values over all queries to obtain the mAP score.
 <p align="center">
   <img src="image/retrieval.png" alt="train" width="300"/>
+  <img src="image/retrieval1.png" alt="train" width="300"/>
+  <img src="image/retrieval2.png" alt="train" width="300"/>
 </p>
 
 ### Conclusion
