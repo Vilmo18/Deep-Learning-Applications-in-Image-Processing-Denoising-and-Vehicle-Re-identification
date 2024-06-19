@@ -53,9 +53,27 @@ As we can the quality is very good and the test loss is very small **1 e-03**
   <img src="image/result.png" alt="train" width="300"/>
 </p>
 
+## Image retrieval for vehicle re-identification
 
 
+### Model Description 
+These are the different component for build our model :
+
+- **Triplet Generation:** We create triplets of images for training the network. Each triplet consists of an anchor image, a positive image (from the same vehicle as the anchor), and a negative image (from a different vehicle).
+
+- **Embedding Network Design:** We design a Convolutional Neural Network (CNN) architecture to extract feature embeddings from the images. This network typically consists of several convolutional layers followed by pooling layers to reduce spatial dimensions, and dense layers to learn the final embedding space.(128 in our case)
+
+- **Triplet Loss Function:** We implement the triplet loss function, which ensures that the distance between the anchor and positive embeddings is minimized, while the distance between the anchor and negative embeddings is maximized. Use the Euclidean distance metric to compute these distances and incorporate a margin parameter to control the embedding space.
+
+- **Model Creation:** We construct a model that takes triplets of images as input and outputs their embeddings.
 
 
+### Evaluation 
+We evaluate the retrieval performance using Mean Average Precision (mAP). We compute the average precision for each query image based on the ranked list of test images, and then average these precision values over all queries to obtain the mAP score.
+<p align="center">
+  <img src="image/retrieval.png" alt="train" width="300"/>
+</p>
 
+### Conclusion
 
+So, while building a CNN from scratch provided valuable insights into the complexities of model design and parameter optimization, the next logical step involves utilizing pretrained models. This approach is anticipated to significantly boost the accuracy and effectiveness of our vehicle re-identification system, surpassing the current mAP of 30% and leading to more reliable retrieval results.
