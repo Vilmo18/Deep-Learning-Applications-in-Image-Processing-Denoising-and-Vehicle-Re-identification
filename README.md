@@ -22,3 +22,40 @@ Now we have added a random noise :
 <p align="center">
   <img src="image/adding_noise.png" alt="train" width="300"/>
 </p>
+
+### Encoder - Decoder structure
+
+Design a fully convolutional network with an encoder-decoder structure.
+
+The encoder will consist of convolutional and pooling layers, and the decoder will use upsampling layers to reconstruct the denoised images.
+
+More precisely, our autoencoder is a convolutional neural network with : an encoder that compresses 64x64 RGB images into an 8x8x256 representation, and a decoder that reconstructs the images back to their original size. It uses Conv2D, MaxPooling2D, and UpSampling2D layers, with ReLU activations in hidden layers and a sigmoid activation in the output layer also the model is optimized using the Adam optimizer and mean squared error loss.
+
+<p align="center">
+  <img src="image/autoencoder.png" alt="train" width="300"/>
+</p>
+
+
+### Training curve
+
+<p align="center">
+  <img src="image/training_curve.png" alt="train" width="300"/>
+</p>
+
+
+### Encoder - Decoder structure
+
+The model performance on the noisy test images can be evaluated based on the visual quality of the denoised images and the quantitative test loss (MSE). The denoised images appear cleaner with less visible noise compared to the noisy inputs, and they closely resemble the original clean images. .
+
+As we can the quality is very good and the test loss is very small **1 e-03**
+
+<p align="center">
+  <img src="image/result.png" alt="train" width="300"/>
+</p>
+
+
+
+
+
+
+
