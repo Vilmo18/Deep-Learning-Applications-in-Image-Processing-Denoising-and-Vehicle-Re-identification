@@ -15,10 +15,10 @@
 To better understand our training dataset, we are displaying some sample.
 
 <p align="center">
-  <img src="images/original.png" alt="train" width="300"/>
+  <img src="image/original.png" alt="train" width="300"/>
 </p>
 
 Now we have added a random noise :
 <p align="center">
-  <img src="images/adding_noise.png" alt="train" width="300"/>
+  <img src="image/adding_noise.png" alt="train" width="300"/>
 </p>
